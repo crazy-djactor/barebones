@@ -1,0 +1,19 @@
+
+<h1>New Post</h1>
+
+<div class="form-group col-md-6">
+  <%= form_for :post,url: posts_path do |f| %>
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title, class: 'form-control' %>
+    </p>
+    <p>
+      <%= f.label :body %><br>
+      <%= f.text_area :body,:rows => 12, class: 'form-control'%>
+    </p>
+    <p>
+      <%= f.submit "Save", class: 'btn btn-primary'%>
+    </p>
+  <%end%>
+</div>
+

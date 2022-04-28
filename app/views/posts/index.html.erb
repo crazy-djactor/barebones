@@ -1,0 +1,12 @@
+<div class= "col-md-8">
+  <% @posts.each do |post| %>
+    <div class="post_wrapper">
+      <h2 class="title"><%= link_to post.title, post %>
+      </h2>
+      <p class="author and date"> <i>by <%= User.find(post.user_id).first_name %> on <%=post.created_at.strftime("%B, %d, %Y")%></i></p>
+    </div>
+    <hr>
+  <% end%>
+  <br />
+  <button type="button" class="btn btn-default center-block"><%= link_to "Create New Post", new_post_path %></button><br />
+</div>
