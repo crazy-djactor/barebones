@@ -3,7 +3,7 @@ def random_name
 end
 
 FactoryBot.define do
-  factory :user do
+  factory :user, :class => 'User' do
     first_name { random_name }
     last_name { 'Test' }
     email { random_name + '@gmail.com'}
